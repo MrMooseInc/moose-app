@@ -13,7 +13,7 @@ class TasksController < ApplicationController
     if task.save
       render json: task, status: :created
     else
-      render json: {task.errors.full_messages}, status: :unprocessible_entity
+      render json: { errors: task.errors.full_messages }, status: :unprocessible_entity
     end
   end
 
@@ -30,7 +30,7 @@ class TasksController < ApplicationController
     if task.save
       render json: task, status: :created
     else
-      render json: {task.errors.full_messages}, status: :unprocessible_entity
+      render json: { errors: task.errors.full_messages }, status: :unprocessible_entity
     end
     
     def destroy
