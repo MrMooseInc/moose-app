@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   
   resources :tasks 
   resources :histories
+  get "/tasks/:id/histories" => "histories#show"
+
 end
