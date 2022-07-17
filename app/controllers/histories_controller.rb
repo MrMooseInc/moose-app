@@ -19,7 +19,7 @@ class HistoriesController < ApplicationController
   end
 
   def show
-    history = History.find(params[:task_id])
+    history = History.where(task_id: params[:id])
     render json: history
   end
 
