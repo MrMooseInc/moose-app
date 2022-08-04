@@ -15,7 +15,7 @@ GET {{ domain }}/histories
 
 ### Task History
 
-GET {{ domain }}/tasks/1/histories
+GET {{ domain }}/tasks/3/histories
 
 ### Task Create
 
@@ -43,8 +43,17 @@ POST {{ domain }}/histories
 Content-Type: application/json
 
 {
-  "task_id": 1,
-  "time_completed": ,
+  "task_id": 2,
   "all_tasks_completed": false
 }
-qq
+
+### Histories delete
+
+DELETE {{ domain }}/tasks/3/histories
+
+
+
+
+
+
+

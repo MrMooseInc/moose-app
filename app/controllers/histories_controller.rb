@@ -8,7 +8,6 @@ class HistoriesController < ApplicationController
   def create
     history = History.new(
       task_id: params[:task_id],
-      time_completed: Datetime.now,
       all_tasks_completed: params[:all_tasks_completed]
     )
     if history.save
