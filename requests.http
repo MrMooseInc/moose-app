@@ -47,7 +47,7 @@ Content-Type: application/json
 
 {
   "task_id": 1,
-  "time_completed": "2022-08-03T03:39:38.551Z",
+  "time_completed": ,
   "all_tasks_completed": false
 }
 
