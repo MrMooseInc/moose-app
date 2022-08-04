@@ -1,0 +1,59 @@
+@domain = http://localhost:3000
+
+
+### Tasks Index
+
+GET {{ domain }}/tasks
+
+### Tasks Show 
+
+GET {{ domain }}/tasks/4
+
+### Histories Index
+
+GET {{ domain }}/histories
+
+### Task History
+
+GET {{ domain }}/tasks/1/histories
+
+
+### Task Create
+
+
+POST {{ domain }}/tasks
+Content-Type: application/json
+
+{
+  "name": "Enema",
+  "doses_required": 10,
+  "doses_given": 9
+}
+
+### Task Update
+
+
+PATCH {{ domain }}/tasks/4
+Content-Type: application/json
+
+{
+  "doses_given": 10
+}
+
+### Histories create
+
+POST {{ domain }}/histories
+Content-Type: application/json
+
+{
+  "task_id": 1,
+  "time_completed": "2022-08-03T03:39:38.551Z",
+  "all_tasks_completed": false
+}
+
+
+
+
+
+
+

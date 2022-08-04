@@ -7,12 +7,12 @@ class HistoriesController < ApplicationController
 
   def create
     history = History.new(
-      history.task_id = params[:task_id],
-      history.datetime = params[:datetime],
-      history.boolean = params[:boolean]
+      task_id: params[:task_id],
+      time_completed: params[:time_completed],
+      all_tasks_completed: params[:all_tasks_completed]
     )
     if history.save
-      render json: task, status: :created
+      render json: history, status: :created
     else
       render json: { errors: history.errors.full_messages }, status: :unprocessible_entity
     end
@@ -24,7 +24,7 @@ class HistoriesController < ApplicationController
   end
 
   def destroy
-    history = History.find(params[:id])
+    history = Task.find(params[:id]).histories.last
     history.destroy
     render json: {message: "History successfully destroyed!"}
   end
