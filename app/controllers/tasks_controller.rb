@@ -32,13 +32,14 @@ class TasksController < ApplicationController
     else
       render json: { errors: task.errors.full_messages }, status: :unprocessible_entity
     end
-    
-    def destroy
-     task = Task.find(params[:id]) 
-     task.destroy
-     render json: {message: "Task successfully destroyed!"}
-    end
-
+  end 
+  
+  def destroy
+    task = Task.find(params[:id]) 
+    task.destroy
+    render json: {message: "Task successfully destroyed!"}
   end
+
+
 
 end
