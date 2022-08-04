@@ -17,9 +17,7 @@ GET {{ domain }}/histories
 
 GET {{ domain }}/tasks/1/histories
 
-
 ### Task Create
-
 
 POST {{ domain }}/tasks
 Content-Type: application/json
@@ -32,12 +30,11 @@ Content-Type: application/json
 
 ### Task Update
 
-
-PATCH {{ domain }}/tasks/4
+PATCH {{ domain }}/tasks/3
 Content-Type: application/json
 
 {
-  "doses_given": 10
+  "doses_given": 3
 }
 
 ### Histories create
@@ -50,10 +47,4 @@ Content-Type: application/json
   "time_completed": ,
   "all_tasks_completed": false
 }
-
-
-
-
-
-
-
+qq
