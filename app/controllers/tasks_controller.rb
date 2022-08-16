@@ -39,6 +39,20 @@ class TasksController < ApplicationController
       render json: { errors: task.errors.full_messages }, status: :unprocessible_entity
     end
   end
+
+  def add_dose
+    task = Task.find(params[:id])
+    task.doses_given += 1
+    history = History.new(
+      task_id: task.id,
+      all_tasks_completed: (task.doses_given >= task.doses_required)
+    )
+    if task.save && history.save
+      render json: {task: task , history: history}, status: :created
+    else
+      render json: { errors: task.errors.full_messages }, status: :unprocessible_entity
+    end
+  end
     
   def destroy
     task = Task.find(params[:id]) 
