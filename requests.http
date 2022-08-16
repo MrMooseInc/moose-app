@@ -51,6 +51,14 @@ Content-Type: application/json
 
 DELETE {{ domain }}/tasks/3/histories
 
+### Add Dose
+
+GET {{ domain }}/tasks/1/add_dose
+Content-Type: application/json
+
+
+
+
 
 
 
