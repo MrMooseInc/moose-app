@@ -22,10 +22,9 @@ class HistoriesController < ApplicationController
     render json: history
   end
 
-  def destroy
-    history = Task.find(params[:id]).histories.last
+  def destroy (id)
+    history = Task.find(id).histories.last
     history.destroy
-    render json: {message: "History successfully destroyed!"}
   end
 
 end

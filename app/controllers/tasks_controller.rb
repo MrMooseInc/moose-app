@@ -54,6 +54,19 @@ class TasksController < ApplicationController
     end
   end
     
+  def remove_dose
+    task = Task.find(params[:id])
+    if task.doses_given > 0
+      task.doses_given -= 1
+    end
+    if task.save
+      HistoriesController.new.destroy(params[:id])
+      render json: {task: task}, status: :ok
+    else 
+      render json: {errors: task.errors.full_messages}, status: :unprocessible_entity
+    end
+  end
+
   def destroy
     task = Task.find(params[:id]) 
     task.destroy
