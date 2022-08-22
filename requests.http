@@ -48,20 +48,16 @@ Content-Type: application/json
 }
 
 ### Histories delete
-
-DELETE {{ domain }}/tasks/3/histories
-
+### DEPRECATED
+###DELETE {{ domain }}/tasks/3/histories
+ 
 ### Add Dose
 
-GET {{ domain }}/tasks/1/add_dose
+GET {{ domain }}/tasks/3/add_dose
 Content-Type: application/json
 
 
+### Reomve Dose
 
-
-
-
-
-
-
+DELETE {{domain}}/tasks/3/remove_dose
 
