@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   resources :tasks 
   resources :histories
   get "/tasks/:id/histories" => "histories#show"
-  delete "tasks/:id/histories" => "histories#destroy"
   get "tasks/:id/add_dose" => "tasks#add_dose"
   delete "tasks/:id/remove_dose" => "tasks#remove_dose"
 end
