@@ -10,10 +10,6 @@ Task.create(name: "eyedrops", doses_required: 2, doses_given: 1)
 Task.create(name: "eye goop", doses_required: 1, doses_given: 0)
 Task.create(name: "food", doses_required: 2, doses_given: 2)
 
-History.create(task_id: 1, time_completed: DateTime.now, all_tasks_completed: false)
-History.create(task_id: 1, time_completed: DateTime.now, all_tasks_completed: true)
-History.create(task_id: 2, time_completed: DateTime.now, all_tasks_completed: true)
-History.create(task_id: 3, time_completed: DateTime.now, all_tasks_completed: false)
-History.create(task_id: 3, time_completed: DateTime.now, all_tasks_completed: true)
+
 
 
