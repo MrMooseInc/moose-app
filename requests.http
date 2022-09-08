@@ -37,6 +37,10 @@ Content-Type: application/json
   "doses_given": 3
 }
 
+### Task Delete
+
+DELETE {{ domain }}/tasks/5
+
 ### Histories create
 
 POST {{ domain }}/histories
