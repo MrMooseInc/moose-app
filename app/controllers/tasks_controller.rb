@@ -8,7 +8,7 @@ class TasksController < ApplicationController
     task = Task.new(
       name: params[:name],
       doses_required: params[:doses_required],
-      doses_given:params[:doses_given]
+      doses_given: 0
     )
     if task.save
       render json: task, status: :created
