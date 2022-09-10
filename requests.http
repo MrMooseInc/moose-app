@@ -24,8 +24,7 @@ Content-Type: application/json
 
 {
   "name": "Enema",
-  "doses_required": 10,
-  "doses_given": 9
+  "doses_required": 10
 }
 
 ### Task Update
