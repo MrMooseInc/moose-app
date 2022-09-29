@@ -26,15 +26,8 @@ class TasksController < ApplicationController
     task = Task.find(params[:id])
     task.name = params[:name] || task.name
     task.doses_required = params[:doses_required] || task.doses_required
-    task.doses_given = params[:doses_given] || task.doses_given
-    if task.doses_given > 0
-      history = History.new(
-        task_id: task.id,
-        all_tasks_completed: (task.doses_given >= task.doses_required)
-      )
-    end
-    if task.save && history.save
-      render json: {task: task , history: history}, status: :created
+    if task.save
+      render json: { task: task }, status: :created
     else
       render json: { errors: task.errors.full_messages }, status: :unprocessible_entity
     end
