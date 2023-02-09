@@ -7,7 +7,7 @@ GET {{ domain }}/tasks
 
 ### Tasks Show 
 
-GET {{ domain }}/tasks/4
+GET {{ domain }}/tasks/1
 
 ### Histories Index
 
@@ -29,7 +29,7 @@ Content-Type: application/json
 
 ### Task Update
 
-PATCH {{ domain }}/tasks/3
+PATCH {{ domain }}/tasks/1
 Content-Type: application/json
 
 {
