@@ -8,16 +8,13 @@ RUN apk add --update --virtual \
   libxml2 \
   libxslt-dev \
   nodejs \
-  yarn \
   libffi-dev \
   readline \
-  build-base \
   postgresql-dev \
   libc-dev \
   linux-headers \
   readline-dev \
   file \
-  imagemagick \
   git \
   tzdata \
   gcompat \
