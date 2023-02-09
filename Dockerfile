@@ -1,21 +1,10 @@
 FROM ruby:3.0.3-alpine
 
 RUN apk add --update --virtual \ 
-  runtime-deps \
   postgresql-client \
   build-base \
-  libxml2-dev \
-  libxml2 \
-  libxslt-dev \
   nodejs \
-  libffi-dev \
-  readline \
   postgresql-dev \
-  libc-dev \
-  linux-headers \
-  readline-dev \
-  file \
-  git \
   tzdata \
   gcompat \
   && rm -rf /var/cache/apk/*
