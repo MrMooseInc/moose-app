@@ -17,6 +17,6 @@ COPY . /moose-app
 
 RUN bundle install
 
-CMD ["rails", "s"]
+CMD ["rails", "db:setup"]
 
 EXPOSE 3000
